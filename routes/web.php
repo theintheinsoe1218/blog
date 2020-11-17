@@ -13,23 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/articles',function(){
-    return 'Article List';
-
-});
-
-Route::get('/articles/detail',function(){
-    return 'Article Detail';
-})->name('article.detail');
-
-Route::get('/articles/detail/{id}', function ($id) {
-    return "Articles Detail - $id";
-});
-
-Route::get('/articles/more',function(){
-    return redirect()->route('article.detail');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/','ArticleController@index');
+Route::get('/articles','ArticleController@index');
+Route::get('/articles/detail/{id}','ArticleController@detail');
+Route::get('/products','Product\ProductController@index');
