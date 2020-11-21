@@ -33,8 +33,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="navbar-nav ">
-                            <a class="nav-link text-success" href="{{ url("/articles/add") }}">+ Add Article</a>
+                        <li class="navbar-item ">
+                            @auth
+                                <a class="nav-link text-success" href="{{ url("/articles/add") }}">+ Add Article</a>
+                            @endauth
+
 
                         </li>
 
