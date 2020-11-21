@@ -24,6 +24,9 @@ Route::get('/articles/add','ArticleController@add');
 Route::post('/articles/add','ArticleController@create');
 Route::get('/articles/delete/{id}','ArticleController@delete');
 
+Route::post('/comments/add','CommentController@create');
+Route::get('/comments/delete/{id}','CommentController@delete');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
